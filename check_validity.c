@@ -6,64 +6,47 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 16:22:42 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/04 19:20:04 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/11 19:32:18 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+#include <stdlib.h>
 
-static void	valid_symbols(t_list *list)
+static char	get_ref(t_list *list, t_list *valid_list)
 {
-	int		i;
-	int		j;
-	char	*str;
+	char i;
 
 	i = 0;
-	j = 0;
-	str = list->content;
-	while (i <= 3)
+	while(valid_list)
 	{
-		while (j <= 3)
-		{
-			if (str[j + i * 5] != '.' && str[j + i * 5] != '#')
-				D_ERROR
-			j++;
-		}
+		if(!ft_strcmp(list->content, valid_list->content))
+			return (i);
+		valid_list = valid_list->next;
 		i++;
-		j = 0;
 	}
-}
-
-static void	valid_number(t_list *list)
-{
-	int		i;
-	int		j;
-	int		n;
-	char	*str;
-
-	i = 0;
-	j = 0;
-	n = 0;
-	str = list->content;
-	while (i <= 3)
-	{
-		while (j <= 3)
-		{
-			if (str[j + i * 5] == '#')
-				n++;
-			j++;
-		}
-		i++;
-		j = 0;
-	}
-	if (n != 4)
-		D_ERROR
+	D_ERROR
 }
 
 
-void	check_validity(t_list *list)
+static void	del(void *a, size_t b)
 {
-	ft_lstiter(list, valid_symbols);
-	ft_lstiter(list, valid_number);
+	a++;
+	b++;
+}
+
+void	check_validity(t_list *list, t_list *valid_list)
+{
+	char ref;
+
+	while (list)
+	{
+		ref = get_ref(list, valid_list);
+		free(list->content);
+		list->content = (t_tetri *)malloc(sizeof(t_tetri));
+		set_format(list->content, ref);
+		list = list->next;
+	}
+	ft_lstdel(&valid_list, del);
 
 }
