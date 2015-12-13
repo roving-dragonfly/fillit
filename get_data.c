@@ -6,7 +6,7 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 11:03:22 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/11 19:49:26 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/13 18:20:46 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ t_list	*get_data(int fd)
 		D_ERROR
 	valid_list = convert(fd);
 	check_validity(list, valid_list);
-
 	return (list);
 }

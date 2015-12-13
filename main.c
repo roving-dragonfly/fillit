@@ -6,7 +6,7 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 10:43:04 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/11 17:51:07 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/13 18:21:09 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,30 @@
 #include <fcntl.h>
 #include "fillit.h"
 
-void put_content(t_list *elem)
+static char *temp(char *s, char y)
 {
-	ft_putstr(elem->content);
-	ft_putstr("\n\n");
+	while(y)
+	{
+		s += ft_strlen(s) + 1;
+		y--;
+	}
+	return s;
 }
 
+static void put_content(t_list *elem)
+{
+	char i;
+	t_tetri	*tetri;
 
+	i = 0;
+	tetri = elem->content;
+	while(i < tetri->y)
+	{
+		ft_putendl(temp((char *)tetri->piece, i));
+		i++;
+	}
+	ft_putstr("\n");
+}
 
 int	main(int argc, char **argv)
 {
