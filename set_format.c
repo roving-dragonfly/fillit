@@ -6,7 +6,7 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/11 19:16:45 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/13 18:20:43 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/13 23:18:40 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,23 +55,23 @@ static char	t(char ref, char low, char high)
 
 void	set_format(t_tetri *tetri, char ref)
 {
-	(t(ref, 0, 3))		? put_in_piece(tetri, "#\0#\0#\0#\0", 1, 4) : "";
-	(t(ref, 4, 7))		? put_in_piece(tetri, "####\0", 4, 1) : "";
-	(t(ref, 8, 16))		? put_in_piece(tetri, "##\0##\0", 2, 2) : "";
-	(t(ref, 17, 22))	? put_in_piece(tetri, "##\0#.\0#.\0", 2, 3) : "";
-	(t(ref, 23, 29))	? put_in_piece(tetri, "##\0.#\0.#\0", 2, 3) : "";
-	(t(ref, 30, 36))	? put_in_piece(tetri, "#.\0#.\0##\0", 2, 3) : "";
-	(t(ref, 37, 42))	? put_in_piece(tetri, ".#\0.#\0##\0", 2, 3) : "";
-	(t(ref, 43, 48))	? put_in_piece(tetri, "###\0..#\0", 3, 2) : "";
-	(t(ref, 49, 54))	? put_in_piece(tetri, "###\0#..\0", 3, 2) : "";
-	(t(ref, 55, 60))	? put_in_piece(tetri, "..#\0###\0", 3, 2) : "";
-	(t(ref, 61, 65))	? put_in_piece(tetri, "#..\0###\0", 3, 2) : "";
-	(t(ref, 66, 71))	? put_in_piece(tetri, "#.\0##\0#.\0", 2, 3) : "";
-	(t(ref, 72, 77))	? put_in_piece(tetri, ".#\0##\0.#\0", 2, 3) : "";
-	(t(ref, 78, 83))	? put_in_piece(tetri, "###\0.#.\0", 3, 2) : "";
-	(t(ref, 84, 89))	? put_in_piece(tetri, ".#.\0###\0", 3, 2) : "";
-	(t(ref, 90, 95))	? put_in_piece(tetri, ".#\0##\0#.\0", 2, 3) : "";
-	(t(ref, 96, 101)) 	? put_in_piece(tetri, "#.\0##\0.#\0", 2, 3) : "";
-	(t(ref, 102, 107))	? put_in_piece(tetri, ".##\0##.\0", 3, 2) : "";
-	(t(ref, 108, 113))	? put_in_piece(tetri, "##.\0.##\0", 3, 2) : "";
+	(t(ref, 0, 3)) ? put_in_piece(tetri, "#\0#\0#\0#\0", 1, 4) : "";
+	(t(ref, 4, 7)) ? put_in_piece(tetri, "####\0", 4, 1) : "";
+	(t(ref, 8, 16)) ? put_in_piece(tetri, "##\0##\0", 2, 2) : "";
+	(t(ref, 17, 22)) ? put_in_piece(tetri, "##\0#.\0#.\0", 2, 3) : "";
+	(t(ref, 23, 29)) ? put_in_piece(tetri, "##\0.#\0.#\0", 2, 3) : "";
+	(t(ref, 30, 36)) ? put_in_piece(tetri, "#.\0#.\0##\0", 2, 3) : "";
+	(t(ref, 37, 42)) ? put_in_piece(tetri, ".#\0.#\0##\0", 2, 3) : "";
+	(t(ref, 43, 48)) ? put_in_piece(tetri, "###\0..#\0", 3, 2) : "";
+	(t(ref, 49, 54)) ? put_in_piece(tetri, "###\0#..\0", 3, 2) : "";
+	(t(ref, 55, 60)) ? put_in_piece(tetri, "..#\0###\0", 3, 2) : "";
+	(t(ref, 61, 65)) ? put_in_piece(tetri, "#..\0###\0", 3, 2) : "";
+	(t(ref, 66, 71)) ? put_in_piece(tetri, "#.\0##\0#.\0", 2, 3) : "";
+	(t(ref, 72, 77)) ? put_in_piece(tetri, ".#\0##\0.#\0", 2, 3) : "";
+	(t(ref, 78, 83)) ? put_in_piece(tetri, "###\0.#.\0", 3, 2) : "";
+	(t(ref, 84, 89)) ? put_in_piece(tetri, ".#.\0###\0", 3, 2) : "";
+	(t(ref, 90, 95)) ? put_in_piece(tetri, ".#\0##\0#.\0", 2, 3) : "";
+	(t(ref, 96, 101))  ? put_in_piece(tetri, "#.\0##\0.#\0", 2, 3) : "";
+	(t(ref, 102, 107)) ? put_in_piece(tetri, ".##\0##.\0", 3, 2) : "";
+	(t(ref, 108, 113)) ? put_in_piece(tetri, "##.\0.##\0", 3, 2) : "";
 }

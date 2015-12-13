@@ -6,14 +6,15 @@
 #    By: aalves <aalves@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/04 16:03:57 by aalves            #+#    #+#              #
-#    Updated: 2015/12/11 19:49:23 by aalves           ###   ########.fr        #
+#    Updated: 2015/12/13 23:18:42 by aalves           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = Fillit
-SRCS = main.c get_data.c convert.c check_shape.c check_validity.c set_format.c
+SRCS = main.c get_data.c convert.c check_validity.c set_format.c 
+# print_sorted.c make_square.c 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

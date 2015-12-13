@@ -6,7 +6,7 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 10:51:15 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/13 18:20:44 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/13 23:18:41 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ typedef struct	s_tetri
 {
 	char	x;
 	char	y;
-	char	l;
-	char	c;
+	char	letter;
 	char	**piece;
 }				t_tetri;
 
 
 t_list	*get_data(int fd);
 t_list	*convert(int fd);
-void	check_shape(char *data);
 void	check_validity(t_list *list, t_list *valid_list);
 void	set_format(t_tetri *tetri, char ref);
+void	print_sorted(t_list *list);
+char	**make_square(char size);
 
 #endif

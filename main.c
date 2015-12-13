@@ -6,7 +6,7 @@
 /*   By: aalves <aalves@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 10:43:04 by aalves            #+#    #+#             */
-/*   Updated: 2015/12/13 18:21:09 by aalves           ###   ########.fr       */
+/*   Updated: 2015/12/13 23:18:42 by aalves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static void put_content(t_list *elem)
 
 	i = 0;
 	tetri = elem->content;
+	printf("%c\n", tetri->letter);
 	while(i < tetri->y)
 	{
 		ft_putendl(temp((char *)tetri->piece, i));
@@ -51,8 +52,8 @@ int	main(int argc, char **argv)
 	if (fd == -1)
 		D_ERROR
 	data = get_data(fd);
-
 	ft_lstiter(data, put_content);
+	//print_sorted(data);
 
 	return (0);
 }
